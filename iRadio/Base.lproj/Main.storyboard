@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4gy-Az-KVp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="h5e-DI-Vcg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4gy-Az-KVp" customClass="ViewController" customModule="iRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="dRW-7M-uDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xyr-mo-GxY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="EWM-3N-TMI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQN-cU-Fb3">
+                                <rect key="frame" x="200" y="464" width="200" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.67450980392156867" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fKN-e6-bmj"/>
+                                    <constraint firstAttribute="width" constant="200" id="nfP-Ty-kuq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.98632120316941552" green="1" blue="0.97328417706336612" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayAction" destination="4gy-Az-KVp" eventType="touchUpInside" id="we0-9q-JO5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vinha-fm-goiania" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-2D-iML">
+                                <rect key="frame" x="151" y="236" width="298" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35686274509803922" green="0.12549019607843137" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jJL-2D-iML" firstAttribute="centerY" secondItem="EWM-3N-TMI" secondAttribute="centerY" id="BBL-ok-Ctp"/>
+                            <constraint firstItem="wQN-cU-Fb3" firstAttribute="top" secondItem="jJL-2D-iML" secondAttribute="bottom" constant="100" id="GS3-ZC-XLS"/>
+                            <constraint firstItem="Xyr-mo-GxY" firstAttribute="top" secondItem="wQN-cU-Fb3" secondAttribute="bottom" constant="100" id="Uhq-7U-hhF"/>
+                            <constraint firstItem="wQN-cU-Fb3" firstAttribute="centerX" secondItem="EWM-3N-TMI" secondAttribute="centerX" id="rb6-e1-EmC"/>
+                            <constraint firstItem="jJL-2D-iML" firstAttribute="centerX" secondItem="EWM-3N-TMI" secondAttribute="centerX" id="ydP-tl-Yxm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="wQN-cU-Fb3" id="iPU-Pl-7Py"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFh-s4-WsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-162" y="-288"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="vinha-fm-goiania" width="298" height="288"/>
+    </resources>
 </document>
