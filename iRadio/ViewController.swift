@@ -12,7 +12,11 @@ import AVKit
 
 class ViewController: UIViewController {
     var player : AVPlayer = AVPlayer()
-    var playing = true;
+    var playing = true
+    var buttonTitle = ""
+    
+    let PAUSE = "Pause"
+    let PLAY = "Play"
     
     @IBOutlet weak var button: UIButton!
     
@@ -26,6 +30,7 @@ class ViewController: UIViewController {
         self.view.layer.addSublayer(playerLayer)
         player.play()
         playing = true;
+        buttonTitle = PAUSE
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +42,12 @@ class ViewController: UIViewController {
     @IBAction func PlayAction() {
         if (playing){
             player.pause()
-            button.setTitle("Play", forState: UIControlState.Normal)
+            buttonTitle = PLAY
         }else{
             player.play()
-            button.setTitle("Pause", forState: UIControlState.Normal)
+            buttonTitle = PAUSE
         }
+        button.setTitle(buttonTitle, forState: UIControlState.Normal)
         playing = !playing
         
     }
