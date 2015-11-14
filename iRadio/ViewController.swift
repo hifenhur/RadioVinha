@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         playerLayer.frame = self.view.bounds
         self.view.layer.addSublayer(playerLayer)
         player.play()
-        print("is playing")
+        playing = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,10 @@ class ViewController: UIViewController {
     @IBAction func PlayAction() {
         if (playing){
             player.pause()
+            button.setTitle("Play", forState: UIControlState.Normal)
         }else{
             player.play()
+            button.setTitle("Pause", forState: UIControlState.Normal)
         }
         playing = !playing
         
